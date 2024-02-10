@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myclass{
+    background-color:lightgreen;
+    width:300px;
+    height:300px;
+    font-size:4.5rem;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    
+}
+#mybutton{
+    font-size:2rem;
+}
+ </style> </head>
+<body>
+    <div id="myclass">
+        Click Me @
+    </div>
+    
+    <button id="mybutton">Click me</button>
+    <script>
+        
+        /*const myclass=document.getElementById("myclass");
+        myclass.addEventListener("click",event=>{
+        event.target.style.backgroundColor="tomato";
+         event.target.textContent="OUCH!😣";
+        });
+        myclass.addEventListener("mouseover",event=>{
+        event.target.style.backgroundColor="yellow";
+        event.target.textContent="Don't Do it😒";
+        });
+        myclass.addEventListener("mouseout",event=>{
+        event.target.style.backgroundColor="Lightgreen";
+        event.target.textContent="Click me😁";
+        });*/
+        const myclass=document.getElementById("myclass");
+        const mybutton=document.getElementById("mybutton");
+        mybutton.addEventListener("click",event=>{
+            myclass.style.backgroundColor="tomato";
+            myclass.textContent="OUCH!😣";
+        });
+        mybutton.addEventListener("mouseover",event=>{
+        myclass.style.backgroundColor="yellow";
+        myclass.textContent="Don't DO it😒";
+        });
+        mybutton.addEventListener("mouseout",event=>{
+            myclass.style.backgroundColor="lightgreen";
+            myclass.textContent="Click me😉";
+        })
+    </script>
+    </body>
+   <!------/// imoj from :emojisense   shortcut = windows key+. ///---->
+</html> 
+
+
+
+// eventListener= listen the specific events to create interactive web pages
+//                      events: click, mouseover,mouseout
+//                      .addEventListener(event,callback); instead of anoymous function and arrow function
+/*---const mybox=document.getElementById("mybox");
+function changeColor(event){
+    event.target.style.backgroundColor="tomato";
+    event.target.textContent="OUCH!";
+}
+mybox.addEventListener("click",changeColor);*/                  //function calling
+
+
+/*const mybox=document.getElementById("mybox");
+    mybox.addEventListener("click",function(event){
+    event.target.style.backgroundColor="tomato";
+    event.target.textContent="OUCH";
+
+});  */    
+
