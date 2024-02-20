@@ -21,3 +21,27 @@ function change()
 </script>
 </body>
 </html>
+<!-----------------------------------------Without Button----------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <input id="inputtext"  onkeyup="change()">
+    
+    <h1 id="para"></h1>
+    
+<script>
+    var t1=document.getElementById("inputtext")
+    var result=document.getElementById("para")
+    console.log(t1.textContent)
+function change()
+{
+    result.textContent=t1.value
+}
+</script>
+</body>
+</html>
