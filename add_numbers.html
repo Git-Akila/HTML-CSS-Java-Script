@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="t1" value="1" >
+    <input id="t2" value="2">
+    <button onclick="resultfun()">Add</button><br>
+   <p id="result">Result</p> 
+    <script>
+        var h1=document.getElementById("t1")
+        console.log(h1.value)
+        var h2=document.getElementById("t2")
+        console.log(h2.value)
+        var result=document.getElementById("result");
+        
+        function resultfun(){
+            var h1value=Number(h1.value)
+        var h2value=Number(h2.value)
+        var total=h1value+h2value
+      result.textContent=total;
+    }
+    </script>
+</body>
+</html>
