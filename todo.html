@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        #input{
+            background-color:#f15e63;
+            color:black;
+            border:none;
+            border-radius: 10px;
+            height:100px;
+            width:400px;
+            
+         }
+        #input::placeholder{
+            color:rgb(195, 36, 195);
+            text-align: center;
+        }
+        .btn{
+            height:25px;
+            width:90px;
+            color:rgb(44, 43, 36);
+            background-color: rgb(218, 158, 218);
+            border: none;
+            border-radius:2px;
+            text-align:center;
+            margin-top:10px;
+            margin-left:300px;
+        }
+        #list-container{
+            background-color:blanchedalmond;
+            height:700px;
+            width:200px;
+        }
+        #list-container li{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <input id="input" placeholder="Enter Text"><br>
+    <button class="btn" onclick="add()">Add</button>
+    <ul id="list-container">
+        <li>Hello
+        <button onclick="deleteitem(event)">Delete</button></li>
+    </ul>
+    <script>
+       // var div=document.querySelector("div")
+      //  div.append("hello")
+        //div.prepend("Akila")
+       // var h1=document.createElement("h1")
+       // h1.textContent="Hello"
+       // div.insertAdjacentElement("beforebegin",h1)
+var ul=document.getElementById("list-container")
+var input=document.getElementById("input")
+       function add(){
+
+        var listitem=document.createElement("li")
+        listitem.innerHTML=input.value+"<button onclick=' deleteitem(event)'>Delete</button>"
+        ul.append(listitem)
+       }
+       function deleteitem(){
+        event.target.parentElement.remove()
+
+       }
+       
+    </script>
+</body>
+</html>
